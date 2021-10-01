@@ -164,6 +164,7 @@ function App() {
         <Navbar handleLogout={handleLogout} isAuth={isAuthenticated} />
         <Switch>
           <Route path="/" exact component={Home} />
+          <Route path="/" exact component={Home} />
           <Route path="/about" component={About} />
           <Route path="/login" component={Login} />
           <Route path="/WalkerHub" component={Walker} />
