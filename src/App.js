@@ -121,6 +121,7 @@ import Walker from "./components/pages/walker/WalkerHub";
 import Shelter from "./components/pages/shelter/ShelterHub";
 import Footer from "./components/Footer";
 import Login from "./components/pages/neutral/Login";
+import Dogs from "./components/pages/dogs/dogs";
 // import Login from "./components/Login";
 // import Profile from "./components/Profile";
 
@@ -165,6 +166,7 @@ function App() {
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/about" component={About} />
+          <Route path="/dogs" exact component={Dogs} />
           <Route path="/login" component={Login} />
           <Route path="/WalkerHub" component={Walker} />
           <Route path="/ShelterHub" component={Shelter} />
