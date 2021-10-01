@@ -9,17 +9,15 @@ h1 {
   text-align: center;
 }
 
+/* .login-form-walker,
+.signup-form-walker, */
+
 .login-form-shelter,
-.signup-form-shelter,
-.login-form-walker,
-.signup-form-walker {
-  background: black;
+.signup-form-shelter {
+  margin-left: 60rem;
+  background: rgba(0, 0, 0, 0.397);
   border-radius: 10px;
   border: 1px solid #bd722b;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  margin: 0 auto;
   max-width: 500px;
   color: rgb(255, 255, 255);
   padding: 30px 50px;
