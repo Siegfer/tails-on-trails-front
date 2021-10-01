@@ -1,7 +1,7 @@
 // import React from "react";
 // // import { Container } from "react-bootstrap";
 // import { NavLink, Link } from "react-router-dom";
-import smallLogo from "./photos/small-logo.png";
+// import smallLogo from "./photos/small-logo.png";
 // import "./Navbar.css";
 
 // const Navbar = (props) => {
@@ -98,6 +98,7 @@ import React, { useState, useEffect } from "react";
 import { Button } from "./Button";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
+import smallLogo from "./photos/small-logo.png";
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -163,15 +164,17 @@ function Navbar() {
 
             <li>
               <Link
-                to="/signup"
+                to="/login"
                 className="nav-links-mobile"
                 onClick={closeMobileMenu}
               >
-                Sign-Up
+                Sign-in
               </Link>
             </li>
           </ul>
-          {button && <Button buttonStyle="btn--outline">SIGN-UP</Button>}
+          <Link to="/login">
+            {button && <Button buttonStyle="btn--outline">SIGN-IN</Button>}
+          </Link>
         </div>
       </nav>
     </>
