@@ -126,21 +126,26 @@ function Navbar() {
       <nav className="navbar">
         <div className="navbar-container">
           <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-            <img src={smallLogo} alt="" className="fab fa-typo3" />
+            <img src={smallLogo} alt="" className="navbar-logo" />
             <i class="fab fa-typo3" />
           </Link>
           <div className="menu-icon" onClick={handleClick}>
             <i className={click ? "fas fa-times" : "fas fa-bars"} />
           </div>
           <ul className={click ? "nav-menu active" : "nav-menu"}>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link to="/" className="nav-links" onClick={closeMobileMenu}>
                 Home
               </Link>
-            </li>
+            </li> */}
             <li className="nav-item">
               <Link to="/about" className="nav-links" onClick={closeMobileMenu}>
                 About Us
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/Dogs" className="nav-links" onClick={closeMobileMenu}>
+                Dogs
               </Link>
             </li>
             <li className="nav-item">
