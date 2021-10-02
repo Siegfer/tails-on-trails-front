@@ -104,76 +104,71 @@
 // export default App;
 
 // import React from "react";
-import React, { useEffect, useState } from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Redirect,
-} from "react-router-dom";
-import jwt_decode from "jwt-decode";
-import setAuthToken from "./utils/setAuthToken";
+import React, { useEffect, useState } from 'react'
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
+import jwt_decode from 'jwt-decode'
+import setAuthToken from './utils/setAuthToken'
 
-import Navbar from "./components/Navbar";
-import Home from "./components/Welcome";
-import About from "./components/About";
-import Walker from "./components/pages/walker/WalkerHub";
-import Shelter from "./components/pages/shelter/ShelterHub";
-import Footer from "./components/Footer";
-import Login from "./components/pages/neutral/Login";
-import Dog from "./components/pages/dogs/Dog"; // import Login from "./components/Login";
+import Navbar from './components/Navbar'
+import Home from './components/Welcome'
+import About from './components/About'
+import Walker from './components/pages/walker/WalkerHub'
+import Shelter from './components/pages/shelter/ShelterHub'
+import Footer from './components/Footer'
+import Login from './components/pages/neutral/Login'
+import Dog from './components/pages/dogs/Dog' // import Login from "./components/Login";
 // import Profile from "./components/Profile";
 
-import "./App.css";
+import './App.css'
 
 function App() {
-  const [currentUser, setCurrentUser] = useState("");
-  const [isAuthenticated, setIsAuthenticated] = useState(true);
+	const [currentUser, setCurrentUser] = useState('')
+	const [isAuthenticated, setIsAuthenticated] = useState(true)
 
-  useEffect(() => {
-    let token;
+	useEffect(() => {
+		let token
 
-    if (!localStorage.getItem("jwtToken")) {
-      setIsAuthenticated(false);
-      console.log("====> Authenticated is now FALSE");
-    } else {
-      token = jwt_decode(localStorage.getItem("jwtToken"));
-      setAuthToken(localStorage.getItem("jwtToken"));
-      setCurrentUser(token);
-    }
-  }, []);
+		if (!localStorage.getItem('jwtToken')) {
+			setIsAuthenticated(false)
+			console.log('====> Authenticated is now FALSE')
+		} else {
+			token = jwt_decode(localStorage.getItem('jwtToken'))
+			setAuthToken(localStorage.getItem('jwtToken'))
+			setCurrentUser(token)
+		}
+	}, [])
 
-  const nowCurrentUser = (userData) => {
-    console.log("===> nowCurrent is here.");
-    setCurrentUser(userData);
-    setIsAuthenticated(true);
-  };
+	const nowCurrentUser = (userData) => {
+		console.log('===> nowCurrent is here.')
+		setCurrentUser(userData)
+		setIsAuthenticated(true)
+	}
 
-  const handleLogout = () => {
-    if (localStorage.getItem("jwtToken")) {
-      // remove token for localStorage
-      localStorage.removeItem("jwtToken");
-      setCurrentUser(null);
-      setIsAuthenticated(false);
-    }
-  };
+	const handleLogout = () => {
+		if (localStorage.getItem('jwtToken')) {
+			// remove token for localStorage
+			localStorage.removeItem('jwtToken')
+			setCurrentUser(null)
+			setIsAuthenticated(false)
+		}
+	}
 
-  return (
-    <>
-      <Router>
-        <Navbar handleLogout={handleLogout} isAuth={isAuthenticated} />
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/about" component={About} />
-          <Route path="/Dog" exact component={Dog} />
-          <Route path="/login" component={Login} />
-          <Route path="/WalkerHub" component={Walker} />
-          <Route path="/ShelterHub" component={Shelter} />
-        </Switch>
-      </Router>
-      <Footer />
-    </>
-  );
+	return (
+		<>
+			<Router>
+				<Navbar handleLogout={handleLogout} isAuth={isAuthenticated} />
+				<Switch>
+					<Route path='/' exact component={Home} />
+					<Route path='/about' component={About} />
+					<Route path='/Dogs' component={Dog} />
+					<Route path='/login' component={Login} />
+					<Route path='/WalkerHub' component={Walker} />
+					<Route path='/ShelterHub' component={Shelter} />
+				</Switch>
+			</Router>
+			<Footer />
+		</>
+	)
 }
 
-export default App;
+export default App

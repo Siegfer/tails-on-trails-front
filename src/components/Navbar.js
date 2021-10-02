@@ -144,7 +144,7 @@ function Navbar() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/Dog" className="nav-links" onClick={closeMobileMenu}>
+              <Link to="/Dogs" className="nav-links" onClick={closeMobileMenu}>
                 Dogs
               </Link>
             </li>
