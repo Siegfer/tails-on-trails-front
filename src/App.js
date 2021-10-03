@@ -104,6 +104,7 @@
 // export default App;
 
 // import React from "react";
+
 import React, { useEffect, useState } from "react";
 import {
   BrowserRouter as Router,
@@ -126,7 +127,7 @@ import Login from "./components/pages/neutral/Login";
 import Dog from "./components/pages/dogs/Dog"; // import Login from "./components/Login";
 import Profile from "./components/Profile";
 
-import "./App.css";
+import './App.css'
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
   let token = localStorage.getItem("jwtToken");
@@ -146,6 +147,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
 };
 
 function App() {
+
   const [currentUser, setCurrentUser] = useState("");
   const [isAuthenticated, setIsAuthenticated] = useState(true);
 
@@ -223,4 +225,4 @@ function App() {
   );
 }
 
-export default App;
+export default App
