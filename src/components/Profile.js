@@ -28,7 +28,7 @@ const Profile = (props) => {
     return (
       <div className="text-center pt-4">
         <h3>
-          Please <Link to="/login">login</Link> to view this page
+          Please <Link to="/Login">login</Link> to view this page
         </h3>
       </div>
     );
