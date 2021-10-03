@@ -1,16 +1,14 @@
-import React from "react";
-import ShelterSignup from "./ShelterSignup";
-import ShelterLogin from "./ShelterLogin";
-import "./Form.css";
+import React from 'react'
+import ShelterSignup from './ShelterSignup'
+import './Form.css'
 
 function ShelterHub() {
-  return (
-    <div>
-      <h1>Shelter Hub</h1>
-      <ShelterLogin />
-      <ShelterSignup />
-    </div>
-  );
+	return (
+		<div>
+			<h1>Shelter Hub</h1>
+			<ShelterSignup />
+		</div>
+	)
 }
 
-export default ShelterHub;
+export default ShelterHub
