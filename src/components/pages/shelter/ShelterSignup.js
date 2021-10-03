@@ -55,7 +55,7 @@ const ShelterSignup = () => {
   if (redirect) return <Redirect to="/ShelterProfile" />; // You can have them redirected to profile (your choice)
 
   return (
-    <form className="signup-form-shelter">
+    <div className="signup-form-shelter">
       <div className="row mt-4">
         <div className="col-md-7 offset-md-3">
           <div className="card card-body">
@@ -118,7 +118,7 @@ const ShelterSignup = () => {
           </div>
         </div>
       </div>
-    </form>
+    </div>
   );
 };
 
