@@ -1,15 +1,17 @@
 // Imports
 import React, { useState } from 'react'
+import Switch from 'react-switch'
 import axios from 'axios'
 import jwt_decode from 'jwt-decode'
 import { Redirect } from 'react-router-dom'
 import setAuthToken from '../../../utils/setAuthToken'
 const { REACT_APP_SERVER_URL } = process.env
 
-const ShelterLogin = (props) => {
+const OneLogin = (props) => {
 	console.log('ShelterLogin: ', props)
 	const [email, setEmail] = useState('')
 	const [password, setPassword] = useState('')
+	const [checked, setChecked] = useState(false)
 
 	const handleEmail = (e) => {
 		setEmail(e.target.value)
@@ -19,21 +21,23 @@ const ShelterLogin = (props) => {
 		setPassword(e.target.value)
 	}
 
+	const handleChange = (e) => {
+		setChecked(e)
+	}
+
 	const handleSubmit = (e) => {
 		e.preventDefault()
-		const userData = { email, password }
+		const userData = { email, password, checked }
+		const role = checked ? 'shelters' : 'walkers'
+		const loginEndpoint = `${REACT_APP_SERVER_URL}/${role}/login`
 		axios
-			.post(`${REACT_APP_SERVER_URL}/shelters/login`, userData)
+			.post(loginEndpoint, userData)
 			.then((response) => {
 				const { token } = response.data
-				// save token to localStorage
 				localStorage.setItem('jwtToken', token)
-				// set token to headers
 				setAuthToken(token)
-				// decode token to get the user data
 				const decoded = jwt_decode(token)
-				// set the current user
-				props.nowCurrentUser(decoded) // function passed down as props.
+				props.nowCurrentUser(decoded)
 			})
 			.catch((error) => {
 				console.log('===> Error on login', error)
@@ -64,6 +68,24 @@ const ShelterLogin = (props) => {
 									className='form-control'
 								/>
 							</div>
+							<div className='form-group'>
+								<label htmlFor='role'>I am a ...</label>
+								<span>
+									<span htmlFor='walker'>WALKER</span>
+									<Switch
+										onChange={handleChange}
+										checked={checked}
+										className='react-switch'
+										checkedHandleIcon={<div>🏥</div>}
+										uncheckedHandleIcon={<div>🦮</div>}
+										checkedIcon={false}
+										uncheckedIcon={false}
+										onColor={'#eb9834'}
+										offColor={'#34ebe8'}
+									/>
+									<span htmlFor='shelter'>SHELTER</span>
+								</span>
+							</div>
 							<button type='submit' className='submit-button'>
 								Submit
 							</button>
@@ -75,4 +97,4 @@ const ShelterLogin = (props) => {
 	)
 }
 
-export default ShelterLogin
+export default OneLogin
