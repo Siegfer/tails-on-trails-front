@@ -8,7 +8,6 @@ import setAuthToken from '../../../utils/setAuthToken'
 const { REACT_APP_SERVER_URL } = process.env
 
 const OneLogin = (props) => {
-	console.log('ShelterLogin: ', props)
 	const [email, setEmail] = useState('')
 	const [password, setPassword] = useState('')
 	const [checked, setChecked] = useState(false)

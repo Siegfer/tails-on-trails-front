@@ -7,41 +7,45 @@ import smallLogo from './photos/small-logo.png'
 const Navbar = (props) => {
 	console.info(props)
 	const { isAuth, currentUser, handleLogout, closeMobileMenu } = props
-	if (isAuth && currentUser.volunteer) {
-		return (
-			<>
-				<ul className='navbar-nav ml-auto'>
-					<li className='nav-item'>
-						<Link className='nav-links' to='/WalkerProfile'>
-							Profile
-						</Link>
-					</li>
-					<li className='nav-item'>
-						<span onClick={handleLogout} className='nav-link logout-links'>
-							Logout
-						</span>
-					</li>
-				</ul>
-			</>
-		)
-	} else if (!currentUser.volunteer && isAuth) {
-		return (
-			<>
-				<ul className='navbar-nav ml-auto'>
-					<li className='nav-item'>
-						<Link className='nav-links' to='/ShelterProfile'>
-							Profile
-						</Link>
-					</li>
-					<li className='nav-item'>
-						<span onClick={handleLogout} className='nav-link logout-links'>
-							Logout
-						</span>
-					</li>
-				</ul>
-			</>
-		)
+	if (isAuth && currentUser) {
+		// We're logged in and have defined currentUser
+		if (currentUser.volunteer) {
+			return (
+				<>
+					<ul className='navbar-nav ml-auto'>
+						<li className='nav-item'>
+							<Link className='nav-links' to='/WalkerProfile'>
+								Walker Profile
+							</Link>
+						</li>
+						<li className='nav-item'>
+							<span onClick={handleLogout} className='nav-link logout-links'>
+								Logout
+							</span>
+						</li>
+					</ul>
+				</>
+			)
+		} else {
+			return (
+				<>
+					<ul className='navbar-nav ml-auto'>
+						<li className='nav-item'>
+							<Link className='nav-links' to='/ShelterProfile'>
+								Shelter Profile
+							</Link>
+						</li>
+						<li className='nav-item'>
+							<span onClick={handleLogout} className='nav-link logout-links'>
+								Logout
+							</span>
+						</li>
+					</ul>
+				</>
+			)
+		}
 	} else {
+		// Not logged in and isAuth is false
 		return (
 			<>
 				<ul>
@@ -68,6 +72,7 @@ const Navbar = (props) => {
 
 const NavbarContainer = (props) => {
 	console.log('NavbarContainer: ', props)
+	const { handleLogout, isAuth, currentUser } = props
 	const [click, setClick] = useState(false)
 	const [button, setButton] = useState(true)
 
@@ -112,10 +117,10 @@ const NavbarContainer = (props) => {
 						</li>
 					</ul>
 					<Navbar
-						isAuth={props.isAuth}
-						currentUser={props.currentUser}
-						handleLogout={props.handleLogout}
-						//closeMobileMenu={props.closeMobileMenu}
+						isAuth={isAuth}
+						currentUser={currentUser}
+						handleLogout={handleLogout}
+						closeMobileMenu={closeMobileMenu}
 					/>
 					<Link to='/login'>{button && <Button buttonStyle='btn--outline'>SIGN-IN</Button>}</Link>
 				</div>
