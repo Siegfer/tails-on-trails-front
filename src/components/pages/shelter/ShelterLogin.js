@@ -40,11 +40,12 @@ const ShelterLogin = (props) => {
         alert("Either email or password is incorrect. Please try again");
       });
   };
+  console.log(props);
 
-  if (props.user) return <Redirect to="/profile" />; // double check
+  if (props.user) return <Redirect to="/" />; // double check
 
   return (
-    <form className="login-form-shelter">
+    <div className="login-form-shelter">
       <div className="row mt-4">
         <div className="col-md-7 offset-md-3">
           <div className="card card-body">
@@ -77,7 +78,7 @@ const ShelterLogin = (props) => {
           </div>
         </div>
       </div>
-    </form>
+    </div>
   );
 };
 
