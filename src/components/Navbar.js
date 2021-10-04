@@ -111,7 +111,7 @@ const NavbarContainer = (props) => {
 							</Link>
 						</li>
 						<li className='nav-item'>
-							<Link to='/Dogs' className='nav-links' onClick={closeMobileMenu}>
+							<Link to='/Dog' className='nav-links' onClick={closeMobileMenu}>
 								Dogs
 							</Link>
 						</li>
