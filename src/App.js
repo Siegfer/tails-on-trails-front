@@ -80,7 +80,13 @@ function App() {
 				<Route path='/WalkerHub' component={Walker} />
 				<Route path='/ShelterHub' component={Shelter} />
 				<Route path='/Dog' exact component={Dog} />
-				<PrivateRoute path='/Profile' component={Profile} user={currentUser} handleLogout={handleLogout} />
+				<PrivateRoute
+					path='/ShelterProfile'
+					component={Profile}
+					user={currentUser}
+					handleLogout={handleLogout}
+					dogs={Dog}
+				/>
 			</Switch>
 			<Footer />
 		</>
