@@ -93,6 +93,7 @@ function App() {
 					component={ShelterProfile}
 					user={currentUser}
 					handleLogout={handleLogout}
+					// dogs={Dog}
 				/>
 			</Switch>
 			<Footer />
