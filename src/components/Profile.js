@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Profile = (props) => {
   const { handleLogout, user } = props;
-  const { id, name, email, exp } = user;
+  const { id, name, email, volunteer, exp } = user;
   const expirationTime = new Date(exp * 1000);
   let currentTime = Date.now();
 
@@ -19,6 +19,7 @@ const Profile = (props) => {
       <p>Name: {name}</p>
       <p>Email: {email}</p>
       <p>ID: {id}</p>
+      <p>volunteer status: {volunteer}</p>
     </div>
   ) : (
     <h2>Loading...</h2>
