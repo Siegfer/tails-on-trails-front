@@ -44,9 +44,7 @@ const OneLogin = (props) => {
       });
   };
 
-
-  if (props.user) return <Redirect to="/Profile" />; // double check
-
+  if (props.user) return <Redirect to="/" />;
 
   return (
     <div className="login-form-shelter">

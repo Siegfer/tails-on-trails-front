@@ -58,7 +58,10 @@ const Navbar = (props) => {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <span onClick={handleLogout} className="nav-links">
+                  <span
+                    onClick={handleLogout}
+                    className="nav-link logout-links"
+                  >
                     Logout
                   </span>
                 </li>
@@ -170,6 +173,5 @@ const NavbarContainer = (props) => {
     </>
   );
 };
-
 
 export default NavbarContainer;
