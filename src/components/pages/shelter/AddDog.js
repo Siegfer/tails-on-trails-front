@@ -5,7 +5,7 @@ import { Redirect } from "react-router-dom";
 
 const { REACT_APP_SERVER_URL } = process.env;
 
-const ExerciseForm = () => {
+const DogForm = () => {
   const [name, setName] = useState("");
   const [img, setImg] = useState("");
   const [breed, setBreed] = useState("");
@@ -68,7 +68,7 @@ if (redirect) return <Redirect to="/profile" />;
 
 return (
     <div>
-    
+      
     </div>
 )
 //   return (
@@ -206,6 +206,6 @@ return (
 //       </div>
 //     </div>
 //   );
-};
+}
 
-export default ExerciseForm;
+export default DogForm
