@@ -44,7 +44,7 @@ const OneLogin = (props) => {
 			})
 	}
 
-	if (props.user) return <Redirect to='/' />
+	if (props.user) return <Redirect to='/profile' />
 
 	return (
 		<div className='login-form-shelter'>
@@ -70,7 +70,7 @@ const OneLogin = (props) => {
 							<div className='form-group'>
 								<label htmlFor='role'>I am a ...</label>
 								<span>
-									<span htmlFor='walker'>WALKER</span>
+									<span htmlFor='walker'>Volunteer</span>
 									<Switch
 										onChange={handleChange}
 										checked={checked}
@@ -82,7 +82,7 @@ const OneLogin = (props) => {
 										onColor={'#eb9834'}
 										offColor={'#34ebe8'}
 									/>
-									<span htmlFor='shelter'>SHELTER</span>
+									<span htmlFor='shelter'>Shelter worker</span>
 								</span>
 							</div>
 							<button type='submit' className='submit-button'>

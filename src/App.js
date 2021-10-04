@@ -81,7 +81,7 @@ function App() {
 				<Route path='/ShelterHub' component={Shelter} />
 				<Route path='/Dog' exact component={Dog} />
 				<PrivateRoute
-					path='/ShelterProfile'
+					path='/Profile'
 					component={Profile}
 					user={currentUser}
 					handleLogout={handleLogout}
