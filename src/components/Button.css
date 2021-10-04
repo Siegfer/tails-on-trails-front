@@ -25,7 +25,9 @@
 }
 
 .btn--medium {
-  padding: 8px 20px;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+  padding: 10px 40px;
   font-size: 18px;
 }
 
