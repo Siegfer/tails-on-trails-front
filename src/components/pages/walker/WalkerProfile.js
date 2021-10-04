@@ -28,7 +28,7 @@ const WalkerProfile = (props) => {
     return (
       <div className="text-center pt-4">
         <h3>
-          Please <Link to="/WalkerLogin">login</Link> to view this page
+          Please <Link to="/OneLogin">login</Link> to view this page
         </h3>
       </div>
     );
