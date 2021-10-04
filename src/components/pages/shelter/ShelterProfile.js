@@ -25,6 +25,7 @@ const ShelterProfile = (props) => {
 		<h2>Loading...</h2>
 	)
 
+
 	const allDogs = (props) => {
 		console.log('INSIDE SHELTER PROFILE FOR ALL DOGS', props)
 		return (

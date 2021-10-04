@@ -7,21 +7,25 @@ const Profile = (props) => {
 	const expirationTime = new Date(exp * 1000)
 	let currentTime = Date.now()
 
+
 	// make a condition that compares exp and current time
 	if (currentTime >= expirationTime) {
 		handleLogout()
 		alert('Session has ended. Please login to continue.')
 	}
 
-	const userData = user ? (
-		<div>
-			<h1>Profile</h1>
-			<p>Name: {name}</p>
-			<p>Email: {email}</p>
-		</div>
-	) : (
-		<h2>Loading...</h2>
-	)
+
+  const userData = user ? (
+    <div>
+      <h1>Profile</h1>
+      <p>Name: {name}</p>
+      <p>Email: {email}</p>
+      <p>ID: {id}</p>
+      <p>volunteer status: {volunteer}</p>
+    </div>
+  ) : (
+    <h2>Loading...</h2>
+  );
 
 	const errorDiv = () => {
 		return (

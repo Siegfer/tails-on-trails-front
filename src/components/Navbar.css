@@ -29,11 +29,12 @@ a {
 }
 
 .navbar-logo {
+  color: #fff;
   justify-self: start;
   margin-left: 20px;
   cursor: pointer;
   text-decoration: none;
-  max-width: 10rem;
+  font-size: 2rem;
   display: flex;
   align-items: center;
 }
