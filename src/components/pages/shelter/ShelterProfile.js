@@ -1,3 +1,4 @@
+
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Dogs from '../dogs/Dog'
@@ -16,16 +17,21 @@ const ShelterProfile = (props) => {
 	}
 
 	const userData = user ? (
-		<div>
-			<h1>Profile</h1>
-			<p>Name: {name}</p>
-			<p>Email: {email}</p>
-			<p>ID: {id}</p>
-		</div>
-	) : (
-		<h2>Loading...</h2>
-	)
-
+    <div className="shelter-container">
+      <div className="shelter-profile-data">
+        <h1>Profile</h1>
+        <p>Name: {name}</p>
+        <p>Email: {email}</p>
+        <p>ID: {id}</p>
+      </div>
+      <div className="shelter-dogs-form">
+        <InputADog />
+      </div>
+    </div>
+  ) : (
+    <h2>Loading...</h2>
+  );
+  
 	const errorDiv = () => {
 		return (
 			<div className='text-center pt-4'>

@@ -1,0 +1,16 @@
+.shelter-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100vw;
+  height: 50vw;
+  background-color: blue;
+}
+
+.shelter-profile-data {
+  background-color: green;
+}
+
+.shelter-dogs-form {
+}
