@@ -8,8 +8,7 @@ const Navbar = (props) => {
   console.info(props);
   const { isAuth, currentUser, handleLogout } = props;
   const [click, setClick] = useState(false);
-  const [button, setButton] = useState(true);
-  const handleClick = () => setClick(!click);
+  const [button] = useState(true);
   const closeMobileMenu = () => setClick(false);
 
   if (isAuth && currentUser) {
@@ -30,10 +29,7 @@ const Navbar = (props) => {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <span
-                    onClick={handleLogout}
-                    className="nav-link logout-links"
-                  >
+                  <span onClick={handleLogout} className="nav-links">
                     Logout
                   </span>
                 </li>
@@ -58,10 +54,7 @@ const Navbar = (props) => {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <span
-                    onClick={handleLogout}
-                    className="nav-link logout-links"
-                  >
+                  <span onClick={handleLogout} className="nav-links">
                     Logout
                   </span>
                 </li>
@@ -96,15 +89,9 @@ const Navbar = (props) => {
                   Shelter's Hub
                 </Link>
               </li>
-              {/* <li>
-                <Link
-                  to="/login"
-                  className="nav-links"
-                  onClick={closeMobileMenu}
-                >
-                  Sign-in
-                </Link>
-              </li> */}
+              <Link to="/Login">
+                {button && <Button buttonStyle="btn--outline">SIGN-IN</Button>}
+              </Link>
             </ul>
           </div>
         </nav>
@@ -165,9 +152,9 @@ const NavbarContainer = (props) => {
             handleLogout={handleLogout}
             closeMobileMenu={closeMobileMenu}
           />
-          <Link to="/Login">
+          {/* <Link to="/Login">
             {button && <Button buttonStyle="btn--outline">SIGN-IN</Button>}
-          </Link>
+          </Link> */}
         </div>
       </nav>
     </>

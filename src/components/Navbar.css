@@ -5,7 +5,7 @@ a {
   display: flex;
   justify-content: space-around;
   color: rgb(0, 0, 0);
-  font-size: 1.5vw;
+  font-size: 1.25vw;
   text-decoration: none;
 } */
 .navbar {
@@ -14,7 +14,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   position: sticky;
   top: 0;
   z-index: 999;
@@ -43,22 +43,35 @@ a {
   width: 10rem;
 }
 
-.nav-menu {
+/* .nav-menu {
   display: grid;
   grid-template-columns: repeat(4, auto);
   grid-gap: 10px;
   list-style: none;
   text-align: center;
   width: 60vw;
-  justify-content: end;
+  justify-content: flex-end;
+  margin-right: 2rem;
+} */
+.nav-menu {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 10px;
+  list-style: none;
+  text-align: center;
+  width: 55vw;
+  justify-content: flex-end;
   margin-right: 2rem;
 }
 
 .nav-item {
+  display: flex;
+  justify-content: flex-end;
   height: 80px;
 }
 
 .nav-links {
+  cursor: pointer;
   color: #fff;
   display: flex;
   align-items: center;
@@ -94,7 +107,7 @@ a {
   display: none;
 }
 
-@media screen and (max-width: 960px) {
+/* @media screen and (max-width: 600px) {
   .NavbarItems {
     position: relative;
   }
@@ -174,4 +187,4 @@ a {
     color: #242424;
     transition: 250ms;
   }
-}
+} */
