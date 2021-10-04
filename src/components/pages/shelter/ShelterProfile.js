@@ -1,16 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Dogs from '../dogs/Dog'
+import Walker from '../walker/Walker'
 
 const ShelterProfile = (props) => {
-	const { handleLogout, user, dogs } = props
-	console.log(`🧚🏽‍♂️ ~ ShelterProfile ~ dogs`, dogs)
-	const { id, name, email, volunteer, exp } = user
+	const { handleLogout, user } = props
+	const { id, name, email, exp } = user
 
 	const expirationTime = new Date(exp * 1000)
 	let currentTime = Date.now()
 
-	// make a condition that compares exp and current time
 	if (currentTime >= expirationTime) {
 		handleLogout()
 		alert('Session has ended. Please login to continue.')
@@ -41,71 +40,9 @@ const ShelterProfile = (props) => {
 		<div className='text-center pt-4'>
 			{user ? userData : errorDiv()}
 			<Dogs />
+			<Walker />
 		</div>
 	)
 }
 
 export default ShelterProfile
-
-// import React from 'react'
-// import Dog from './pages/dogs/Dog'
-// import { Link } from 'react-router-dom'
-
-// const Profile = (props) => {
-// 	const { handleLogout, user, dog } = props
-// 	console.log(`🧚🏽‍♂️ ~ Profile ~ props`, props)
-// 	const { name, email, volunteer, exp } = user
-// 	const { breed, gender, size, characteristic, age, description } = Dog
-// 	const expirationTime = new Date(exp * 1000)
-// 	let currentTime = Date.now()
-
-// 	// make a condition that compares exp and current time
-// 	if (currentTime >= expirationTime) {
-// 		handleLogout()
-// 		alert('Session has ended. Please login to continue.')
-// 	}
-
-// 	const userData = user ? (
-// 		<div>
-// 			<h1>Profile</h1>
-// 			<p>Name: {name}</p>
-// 			<p>Email: {email}</p>
-// 		</div>
-// 	) : (
-// 		<h2>Loading...</h2>
-// 	)
-
-// 	const allDogs = Dog ? (
-// 		<div>
-// 			<h1>All Dogs</h1>
-// 			<h1>{props.name}</h1>
-// 			<p>Breed: {breed}</p>
-// 			<p>Gender: {gender}</p>
-// 			<p>Size: {size}</p>
-// 			<p>Characteristic: {characteristic}</p>
-// 			<p>Age: {age}</p>
-// 			<p>Description: {description}</p>
-// 		</div>
-// 	) : (
-// 		<h2>Loading...</h2>
-// 	)
-
-// 	const errorDiv = () => {
-// 		return (
-// 			<div className='text-center pt-4'>
-// 				<h3>
-// 					Please <Link to='/login'>login</Link> to view this page
-// 				</h3>
-// 			</div>
-// 		)
-// 	}
-
-// 	return (
-// 		<div className='text-center pt-4'>
-// 			{user ? userData : errorDiv()}
-// 			{Dog ? allDogs : errorDiv()}
-// 		</div>
-// 	)
-// }
-
-// export default Profile
