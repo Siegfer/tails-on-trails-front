@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import Axios from 'axios'
-import Dog from '../dogs/Dog'
-const { REACT_APP_SERVER_URL } = process.env
 
 const ShelterProfile = (props) => {
-	const { handleLogout, user } = props
-	const { id, name, email, exp } = user
+	const { handleLogout, user, dog } = props
+	console.log(`🧚🏽‍♂️ ~ Profile ~ props`, props)
+	const { id, name, email, volunteer, exp } = user
+	// const { breed, gender, size, characteristic, age, description } = Dog
 
 	const expirationTime = new Date(exp * 1000)
 	let currentTime = Date.now()
@@ -28,36 +27,20 @@ const ShelterProfile = (props) => {
 		<h2>Loading...</h2>
 	)
 
-	const [Dog, setDog] = useState([])
-
-	useEffect(() => {
-		const dogsData = async () => {
-			const res = await Axios.get(`${REACT_APP_SERVER_URL}/dogs`)
-			console.log('ALL DOGS DATA', res.data.dogs)
-			setDog(res.data.dogs)
-		}
-		dogsData()
-	}, [])
-
-	const allDogs = () => {
-		return dogs.map((e, i) => {
-			return (
-				<DogsContainer
-					key={i}
-					_id={e._id}
-					name={e.name}
-					breed={e.breed}
-					gender={e.gender}
-					size={e.size}
-					characteristic={e.characteristic}
-					age={e.age}
-					description={e.description}
-				/>
-			)
-		})
-	}
-
-	let displayDogsList = dogs ? allDogs() : <h2> Loading NUGGIES.... </h2>
+	// const allDogs = Dog ? (
+	// 	<div>
+	// 		<h1>All Dogs</h1>
+	// 		<h1>{props.name}</h1>
+	// 		<p>Breed: {breed}</p>
+	// 		<p>Gender: {gender}</p>
+	// 		<p>Size: {size}</p>
+	// 		<p>Characteristic: {characteristic}</p>
+	// 		<p>Age: {age}</p>
+	// 		<p>Description: {description}</p>
+	// 	</div>
+	// ) : (
+	// 	<h2>Loading...</h2>
+	// )
 
 	const errorDiv = () => {
 		return (
@@ -69,12 +52,7 @@ const ShelterProfile = (props) => {
 		)
 	}
 
-	return (
-		<div className='text-center pt-4'>
-			{user ? userData : errorDiv()}
-			{displayDogsList}
-		</div>
-	)
+	return <div className='text-center pt-4'>{user ? userData : errorDiv()}</div>
 }
 
 export default ShelterProfile
