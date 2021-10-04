@@ -1,10 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Redirect,
-} from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 import jwt_decode from "jwt-decode";
 import setAuthToken from "./utils/setAuthToken";
 
@@ -12,10 +7,12 @@ import Navbar from "./components/Navbar";
 import Home from "./components/Welcome";
 import About from "./components/About";
 import Walker from "./components/pages/walker/WalkerHub";
+import WalkerProfile from "./components/pages/walker/WalkerProfile";
 import Shelter from "./components/pages/shelter/ShelterHub";
+import ShelterProfile from "./components/pages/shelter/ShelterProfile";
 import Footer from "./components/Footer";
 import Dog from "./components/pages/dogs/Dog";
-import Profile from "./components/Profile";
+// import Profile from "./components/Profile";
 import OneLogin from "./components/pages/neutral/OneLogin";
 
 import "./App.css";
@@ -78,6 +75,9 @@ function App() {
       />
       <Switch>
         <Route path="/" exact component={Home} />
+        <Route path="/WalkerHub" component={Walker} />
+        <Route path="/ShelterHub" component={Shelter} />
+        <Route path="/Dog" exact component={Dog} />
         <Route path="/about" component={About} />
         <Route
           path="/Login"
@@ -90,12 +90,15 @@ function App() {
             />
           )}
         />
-        <Route path="/WalkerHub" component={Walker} />
-        <Route path="/ShelterHub" component={Shelter} />
-        <Route path="/Dog" exact component={Dog} />
         <PrivateRoute
-          path="/Profile"
-          component={Profile}
+          path="/WalkerProfile"
+          component={WalkerProfile}
+          user={currentUser}
+          handleLogout={handleLogout}
+        />
+        <PrivateRoute
+          path="/ShelterProfile"
+          component={ShelterProfile}
           user={currentUser}
           handleLogout={handleLogout}
         />
@@ -103,8 +106,6 @@ function App() {
       <Footer />
     </>
   );
-
-
 }
 
 export default App;
