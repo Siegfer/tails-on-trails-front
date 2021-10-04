@@ -44,6 +44,7 @@ const OneLogin = (props) => {
       });
   };
 
+
   if (props.user) return <Redirect to="/Profile" />; // double check
 
 
