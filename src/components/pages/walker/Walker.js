@@ -9,9 +9,8 @@ const Walkers = () => {
 	useEffect(() => {
 		const walkerData = async () => {
 			const res = await Axios.get(`${REACT_APP_SERVER_URL}/shelters/volunteer`)
-			console.log(`🧚🏽‍♂️ ~ walkerData ~ res`, res)
-			console.log('ALL WALKERS DATA', res.data.walkers)
-			setWalkers(res.data.walkers)
+			console.log(`🧚🏽‍♂️ ~ walkerData ~ res`, res.data.volunteers)
+			setWalkers(res.data.volunteers)
 		}
 		walkerData()
 	}, [])
@@ -31,7 +30,7 @@ const Walkers = () => {
 		})
 	}
 
-	let displayWalkerList = walkers ? allWalkers() : <h2> Loading NUGGIES.... </h2>
+	let displayWalkerList = walkers ? allWalkers() : <h2> Loading VOLUNTEERS NUGGIES.... </h2>
 
 	return (
 		<div>
