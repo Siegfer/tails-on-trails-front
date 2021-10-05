@@ -1,16 +1,138 @@
+body {
+  background-color: black;
+}
 .shelter-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
   width: 100vw;
-  height: 50vw;
-  background-color: blue;
+  /* height: 70vw; */
+}
+
+h1 {
+  border-bottom: 1px solid white;
+  color: #fdfdfd;
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  padding: 10px;
+  text-align: center;
+}
+
+/* .login-form-walker,
+  .signup-form-walker, */
+
+.shelter-dogs-form {
+  margin-left: 60rem;
+  margin-top: 2rem;
+  background: rgba(0, 0, 0, 0.397);
+  border-radius: 10px;
+  border: 2px solid #ec0da2;
+  width: 45%;
+  height: 50%;
+  color: rgb(255, 255, 255);
+  padding: 30px 50px;
+}
+
+.profile-form-control {
+  border: 1px solid #d9d9d9;
+  font-size: 20px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 10px;
+  width: 100%;
+}
+
+.profile-form-label {
+  color: #ffffff;
+  display: block;
+  font-family: sans-serif;
+  font-size: 20px;
+  padding: 5px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.submitButton {
+  padding: 10px;
+  background-color: #6976d9;
+  color: white;
+  font-family: sans-serif;
+  font-size: 14px;
+  margin: 20px 0px;
 }
 
 .shelter-profile-data {
-  background-color: green;
+  background: rgba(0, 0, 0, 0.397);
+  border-radius: 10px;
+  border: 2px solid #ec0da2;
+  width: 45%;
+  margin-left: 60rem;
+  margin-top: 1rem;
+  color: white;
+  text-align: center;
 }
 
-.shelter-dogs-form {
+/* .shelter-dogs-form {
+  background-color: blueviolet;
+} */
+.doggy-data {
+  background: rgba(0, 0, 0, 0.397);
+  border-radius: 10px;
+  border: 2px solid #ec0da2;
+  width: 45%;
+  margin-top: 0rem;
+  margin-left: 60rem;
+  color: white;
+}
+.walker-data {
+  height: 300px;
+  width: 300px;
+  margin-left: 5rem;
+
+  background-color: coral;
+}
+
+.profile-video {
+  margin-top: -5rem;
+  width: 50%;
+  background-color: black;
+}
+
+.username {
+  color: #ec0da2;
+  margin-left: 80rem;
+  margin-top: 3rem;
+  text-decoration: none;
+}
+
+/* .dog-list {
+  text-align: center;
+  color: white;
+} */
+.dogs-container {
+  width: 20rem;
+  height: 20rem;
+}
+
+#profile-form-button {
+  margin-top: 10px;
+  margin-left: 39%;
+  border: 2px solid white;
+  border-radius: 10px;
+  background-color: #00000079;
+  color: pink;
+  padding: 2px;
+  font-size: 1vw;
+  width: 10rem;
+  height: 2rem;
+}
+#edit-user-data {
+  margin-top: 10px;
+  border: 2px solid white;
+  border-radius: 10px;
+  background-color: #00000079;
+  color: pink;
+  padding: 2px;
+  font-size: 1vw;
+  width: 10rem;
+  height: 2rem;
 }
