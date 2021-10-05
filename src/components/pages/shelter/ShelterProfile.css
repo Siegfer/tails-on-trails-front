@@ -2,8 +2,9 @@ body {
   background-color: black;
 }
 .shelter-container {
-  width: 100vw;
-  /* height: 70vw; */
+  margin-top: -10rem;
+  width: 100rem;
+  height: 100%;
 }
 
 h1 {
@@ -17,17 +18,14 @@ h1 {
   text-align: center;
 }
 
-/* .login-form-walker,
-  .signup-form-walker, */
-
 .shelter-dogs-form {
   margin-left: 60rem;
-  margin-top: 2rem;
+  margin-top: 8rem;
   background: rgba(0, 0, 0, 0.397);
   border-radius: 10px;
   border: 2px solid #ec0da2;
   width: 45%;
-  height: 50%;
+  height: 65%;
   color: rgb(255, 255, 255);
   padding: 30px 50px;
 }
@@ -69,23 +67,26 @@ h1 {
   margin-top: 1rem;
   color: white;
   text-align: center;
+}
+
+#doggy-data {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background: rgba(0, 0, 0, 0.692);
+  border-radius: 10px;
+  /* border: 2px solid #ec0da2; */
+  width: 70%;
+  margin-top: 1rem;
+  margin-left: 56rem;
+  margin-bottom: 2rem;
+  color: white;
   padding: 20px;
 }
 
-/* .shelter-dogs-form {
-  background-color: blueviolet;
-} */
-
-.walker-data {
-  height: 300px;
-  width: 300px;
-  margin-left: 5rem;
-
-  background-color: coral;
-}
-
 .profile-video {
-  margin-top: -5rem;
+  margin-top: 4rem;
   width: 50%;
   background-color: black;
 }
@@ -97,10 +98,10 @@ h1 {
   text-decoration: none;
 }
 
-/* .dog-list {
-  text-align: center;
-  color: white;
-} */
+.dogs-container {
+  width: 20rem;
+  height: 20rem;
+}
 
 #profile-form-button {
   margin-top: 10px;
@@ -116,6 +117,7 @@ h1 {
 }
 #edit-user-data {
   margin-top: 10px;
+  margin-bottom: 1rem;
   border: 2px solid white;
   border-radius: 10px;
   background-color: #00000079;
@@ -126,31 +128,17 @@ h1 {
   height: 2rem;
 }
 
-#doggy-data {
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: row;
-  flex-wrap: wrap;
-  background: rgba(0, 0, 0, 0.397);
-  border-radius: 10px;
-  /* border: 2px solid #ec0da2; */
-  width: 45%;
-  margin-top: 1rem;
-  margin-left: 62rem;
+#profile-dog-title {
   color: white;
-  padding: 5px;
+  margin-left: 77rem;
+  margin-top: 2rem;
 }
 
 #your-dogs {
   margin: 1rem;
   border: 2px solid #ec0da2;
   border-radius: 10px;
-  width: 13rem;
+  width: 15rem;
   height: 11rem;
   padding: 5px;
-}
-#profile-dog-title {
-  margin-top: 2rem;
-  margin-left: 79rem;
-  color: white;
 }

@@ -1,17 +1,3 @@
-// import React from 'react';
-
-// const Footer = () => {
-//     return (
-//         <footer className="footer bg-dark">
-//             <div className="container text-center">
-//                 <span className="text-muted">@2021 Built by SEI 802</span>
-//             </div>
-//         </footer>
-//     )
-// }
-
-// export default Footer;
-
 import React from "react";
 import "./Footer.css";
 import { Button } from "./Button";
@@ -47,26 +33,18 @@ function Footer() {
           <div className="footer-link-items">
             <h2>About Our Company</h2>
             <Link to="/about">About us</Link>
-            {/* <Link to="/">=========</Link>
-            <Link to="/">=========</Link>
-            <Link to="/">=========</Link>
-            <Link to="/">=========</Link> */}
           </div>
           <div className="footer-link-items">
             <h2>Contact Us</h2>
             <Link to="/">Contact</Link>
             <Link to="/">Support</Link>
             <Link to="/">Donations</Link>
-            {/* <Link to="/">=========</Link> */}
           </div>
         </div>
         <div className="footer-link-wrapper">
           <div className="footer-link-items">
             <h2>Videos</h2>
             <Link to="/">Submit Video</Link>
-            {/* <Link to="/">=========</Link>
-            <Link to="/">=========</Link>
-            <Link to="/">=========</Link> */}
           </div>
           <div className="footer-link-items">
             <h2>Social Media</h2>
