@@ -1,0 +1,36 @@
+.dogs-page {
+  margin-top: 0rem;
+}
+#dog-page-title {
+  margin-left: 45rem;
+  margin-top: 30rem;
+  color: rgb(253, 253, 253);
+}
+
+.dogs-div {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background: rgba(0, 0, 0, 0.692);
+  border-radius: 10px;
+  /* border: 2px solid #ec0da2; */
+  width: 100%;
+  margin-top: 2rem;
+  margin-left: 0rem;
+  margin-bottom: 2rem;
+  color: white;
+  padding: 20px;
+}
+.each-doggy {
+  margin: 1rem;
+  border: 2px solid #ec0da2;
+  border-radius: 10px;
+  width: 15rem;
+  height: 11rem;
+  padding: 5px;
+}
+.dog-page-video {
+  height: 30rem;
+  margin-top: -32rem;
+}

@@ -1,0 +1,59 @@
+.login-body-div {
+  height: 55rem;
+}
+.login-form {
+  margin-top: 10%;
+  margin-left: 29%;
+  background: rgba(0, 0, 0, 0.397);
+  border-radius: 10px;
+  border: 2px solid #ec0da2;
+  width: 45%;
+  height: 50%;
+  color: rgb(255, 255, 255);
+  padding: 30px 50px;
+}
+
+#submit-button-onelogin {
+  margin-top: 2rem;
+  margin-left: 39%;
+  border: 2px solid white;
+  border-radius: 10px;
+  background-color: #00000079;
+  color: pink;
+  padding: 2px;
+  font-size: 1vw;
+  width: 10rem;
+  height: 2rem;
+}
+.react-switch {
+  margin-left: 5%;
+  /* margin-bottom: 1rem;
+  margin-top: 1rem; */
+}
+
+#walker {
+  margin-left: 33%;
+  /* margin-bottom: 1rem;
+  margin-top: 1rem; */
+}
+
+#shelter {
+  margin-left: 5%;
+  /* margin-bottom: 1rem;
+  margin-top: 1rem; */
+}
+#i-am {
+  font-size: 20px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 46%;
+}
+#login {
+  text-align: center;
+}
+.form-control-login {
+  font-size: 20px;
+}
+#label-login {
+  font-size: 1vw;
+}
