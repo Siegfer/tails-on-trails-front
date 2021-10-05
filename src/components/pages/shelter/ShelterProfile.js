@@ -36,9 +36,7 @@ const ShelterProfile = (props) => {
         {/* <Dogs /> */}
         <ShelterDog />
       </div>
-      <div className="walker-data">
-        <Walker />
-      </div>
+      <div className="walker-data">{/* <Walker /> */}</div>
     </div>
   ) : (
     <h2>Loading...</h2>

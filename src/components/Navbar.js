@@ -12,7 +12,6 @@ const Navbar = (props) => {
   const closeMobileMenu = () => setClick(false);
 
   if (isAuth && currentUser) {
-    // We're logged in and have defined currentUser
     if (currentUser.volunteer) {
       return (
         <>
@@ -77,7 +76,7 @@ const Navbar = (props) => {
                   className="nav-links"
                   onClick={closeMobileMenu}
                 >
-                  Volunteer Today!
+                  Volunteer's Hub
                 </Link>
               </li>
               <li className="nav-item">

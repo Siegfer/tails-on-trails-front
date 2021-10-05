@@ -25,7 +25,7 @@ function ShelterHub() {
           muted
         />
       </div>
-      <div class="shelter-container">
+      <div id="shelter-container-signup">
         <div>
           <ShelterSignup />
         </div>

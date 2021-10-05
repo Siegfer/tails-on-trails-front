@@ -27,33 +27,31 @@
 }
 .react-switch {
   margin-left: 5%;
-  /* margin-bottom: 1rem;
-  margin-top: 1rem; */
 }
 
 #walker {
   margin-left: 33%;
-  /* margin-bottom: 1rem;
-  margin-top: 1rem; */
 }
 
 #shelter {
   margin-left: 5%;
-  /* margin-bottom: 1rem;
-  margin-top: 1rem; */
 }
+
 #i-am {
   font-size: 20px;
   margin-top: 1rem;
   margin-bottom: 1rem;
   margin-left: 46%;
 }
+
 #login {
   text-align: center;
 }
+
 .form-control-login {
   font-size: 20px;
 }
+
 #label-login {
   font-size: 1vw;
 }

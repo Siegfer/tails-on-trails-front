@@ -52,7 +52,7 @@ const ShelterSignup = () => {
     }
   };
 
-  if (redirect) return <Redirect to="/ShelterProfile" />; // You can have them redirected to profile (your choice)
+  if (redirect) return <Redirect to="/ShelterProfile" />;
 
   return (
     <div className="signup-form-shelter">
