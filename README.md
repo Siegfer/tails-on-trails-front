@@ -88,7 +88,8 @@ Your roll as a Volunteer is important to both dogs and shelters. Shelters don't 
 ![Log In](/public/img/Login.png)
 
 **Profile**
-![Profile]()
+![Profile](/public/img/Profile1.png)
+![Profile](/public/img/Profile2.png)
 
 **All Dogs**
 ![All Dogs](/public/img/AllDogs.png)
@@ -119,8 +120,6 @@ const handleSubmit = (e) => {
   };
 }
 ```
-
-
 ## Stretch Goals
 
 - Add more type of volunteers
