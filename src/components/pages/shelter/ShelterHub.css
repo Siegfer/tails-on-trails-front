@@ -1,24 +1,16 @@
-h1 {
-  border-bottom: 1px solid white;
-  color: #3d3d3d;
-  font-family: sans-serif;
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 24px;
-  padding: 10px;
-  text-align: center;
+.shelter-container {
+  margin-top: -10rem;
+  height: 45rem;
 }
 
-/* .login-form-walker,
-  .signup-form-walker, */
-
-.login-form-shelter,
 .signup-form-shelter {
-  margin-left: 0rem;
+  margin-top: 22rem;
+  margin-left: 60rem;
   background: rgba(0, 0, 0, 0.397);
   border-radius: 10px;
-  border: 1px solid #bd722b;
-  max-width: 500px;
+  border: 2px solid #ffffff;
+  width: 45%;
+  height: 55%;
   color: rgb(255, 255, 255);
   padding: 30px 50px;
 }
@@ -31,7 +23,7 @@ input {
   width: 100%;
 }
 
-label {
+#shelter-label {
   color: #ffffff;
   display: block;
   font-family: sans-serif;
@@ -40,11 +32,32 @@ label {
   margin-bottom: 5px;
 }
 
-.submitButton {
-  padding: 10px;
-  background-color: #6976d9;
-  color: white;
-  font-family: sans-serif;
-  font-size: 14px;
-  margin: 20px 0px;
+#shelter-submit {
+  margin-top: 2rem;
+  margin-left: 39%;
+  border: 2px solid rgba(163, 92, 0, 0.685);
+  border-radius: 10px;
+  background-color: #00000079;
+  color: rgb(255, 0, 0);
+  padding: 2px;
+  font-size: 1vw;
+  width: 10rem;
+  height: 2rem;
+}
+#snow {
+  margin-top: -15rem;
+  margin-left: 0rem;
+}
+.shelter-form-control {
+  font-size: 20px;
+}
+#shelter-label {
+  font-size: 1vw;
+}
+#title-shelter {
+  text-align: center;
+  font-size: 2rem;
+}
+#snowfall {
+  margin-top: -15rem;
 }
