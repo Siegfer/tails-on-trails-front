@@ -9,7 +9,6 @@ const Dogs = () => {
 	useEffect(() => {
 		const dogsData = async () => {
 			const res = await Axios.get(`${REACT_APP_SERVER_URL}/shelters/dogs`)
-			console.log(`🧚🏽‍♂️ ~ dogsData ~ res`, res.data.update.dog)
 			setDogs(res.data.update.dog)
 		}
 		dogsData()
@@ -17,7 +16,6 @@ const Dogs = () => {
 
 	const allDogs = () => {
 		return dogs.map((e, i) => {
-			console.log('INSIDE .MAP OF ALLDOGS', e)
 			return (
 				<DogsContainer
 					key={i}
