@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import Dogs from '../dogs/Dog'
 import ShelterDog from "./ShelterDog";
 import Walker from "../walker/Walker";
 import InputADog from "./InputADog";

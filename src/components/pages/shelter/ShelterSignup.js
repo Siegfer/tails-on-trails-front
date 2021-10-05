@@ -59,59 +59,73 @@ const ShelterSignup = () => {
       <div className="row mt-4">
         <div className="col-md-7 offset-md-3">
           <div className="card card-body">
-            <h2 className="py-2">Signup</h2>
+            <h2 id="title-shelter">Signup</h2>
             <form onSubmit={handleSubmit}>
-              <div className="form-group">
-                <label htmlFor="name">Company Name</label>
+              <div className="shelter-form-group">
+                <label id="shelter-label" htmlFor="name">
+                  Company Name
+                </label>
                 <input
                   type="text"
                   name="name"
                   value={name}
                   onChange={handleName}
-                  className="form-control"
+                  className="shelter-form-control"
                 />
               </div>
-              <div className="form-group">
-                <label htmlFor="email">Email</label>
+              <div className="shelter-form-group">
+                <label id="shelter-label" htmlFor="email">
+                  Email
+                </label>
                 <input
                   type="email"
                   name="email"
                   value={email}
                   onChange={handleEmail}
-                  className="form-control"
+                  className="shelter-form-control"
                 />
               </div>
-              <div className="form-group">
-                <label htmlFor="city">City</label>
+              <div className="shelter-form-group">
+                <label id="shelter-label" htmlFor="city">
+                  City
+                </label>
                 <input
                   type="text"
                   name="city"
                   value={city}
                   onChange={handleCity}
-                  className="form-control"
+                  className="shelter-form-control"
                 />
               </div>
-              <div className="form-group">
-                <label htmlFor="password">Password</label>
+              <div className="shelter-form-group">
+                <label id="shelter-label" htmlFor="password">
+                  Password
+                </label>
                 <input
                   type="password"
                   name="password"
                   value={password}
                   onChange={handlePassword}
-                  className="form-control"
+                  className="shelter-form-control"
                 />
               </div>
-              <div className="form-group">
-                <label htmlFor="confirmPassword">Confirm Password</label>
+              <div className="shelter-form-group">
+                <label id="shelter-label" htmlFor="confirmPassword">
+                  Confirm Password
+                </label>
                 <input
                   type="password"
                   name="confirmPassword"
                   value={confirmPassword}
                   onChange={handleConfirmPassword}
-                  className="form-control"
+                  className="shelter-form-control"
                 />
               </div>
-              <button type="submit" className="submit-button">
+              <button
+                id="shelter-submit"
+                type="submit"
+                className="submit-button"
+              >
                 Submit
               </button>
             </form>
