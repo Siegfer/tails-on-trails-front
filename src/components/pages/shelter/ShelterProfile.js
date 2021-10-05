@@ -32,11 +32,10 @@ const ShelterProfile = (props) => {
         <p>ID: {id}</p>
         <button id="edit-user-data">edit</button>
       </div>
-
-      <div className="doggy-data">
+      <div>
         <Dogs />
+        {/* <div className="walker-data"><Walker /></div> */}
       </div>
-      {/* <div className="walker-data"><Walker /></div> */}
     </div>
   ) : (
     <h2>Loading...</h2>
@@ -62,4 +61,3 @@ const ShelterProfile = (props) => {
 };
 
 export default ShelterProfile;
-

@@ -1,0 +1,24 @@
+body {
+}
+.dogs-page-header {
+}
+.doggy-data {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background: rgba(0, 0, 0, 0.397);
+  border-radius: 10px;
+  border: 2px solid #ec0da2;
+  width: 45%;
+  margin-top: 0rem;
+  margin-left: 60rem;
+  color: white;
+  padding: 20px;
+}
+.each-doggy {
+  border: 2px solid #ec0da2;
+  border-radius: 10px;
+  width: 15rem;
+  height: 15rem;
+  padding: 5px;
+}

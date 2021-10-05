@@ -69,6 +69,7 @@ h1 {
   margin-top: 1rem;
   color: white;
   text-align: center;
+  padding: 20px;
 }
 
 /* .shelter-dogs-form {
@@ -82,6 +83,7 @@ h1 {
   margin-top: 0rem;
   margin-left: 60rem;
   color: white;
+  padding: 20px;
 }
 .walker-data {
   height: 300px;
