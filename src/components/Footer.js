@@ -45,28 +45,28 @@ function Footer() {
       <div className="footer-links">
         <div className="footer-link-wrapper">
           <div className="footer-link-items">
-            <h2>About Us</h2>
-            <Link to="/sign-up">=========</Link>
+            <h2>About Our Company</h2>
+            <Link to="/about">About us</Link>
+            {/* <Link to="/">=========</Link>
             <Link to="/">=========</Link>
             <Link to="/">=========</Link>
-            <Link to="/">=========</Link>
-            <Link to="/">=========</Link>
+            <Link to="/">=========</Link> */}
           </div>
           <div className="footer-link-items">
             <h2>Contact Us</h2>
             <Link to="/">Contact</Link>
             <Link to="/">Support</Link>
             <Link to="/">Donations</Link>
-            <Link to="/">=========</Link>
+            {/* <Link to="/">=========</Link> */}
           </div>
         </div>
         <div className="footer-link-wrapper">
           <div className="footer-link-items">
             <h2>Videos</h2>
             <Link to="/">Submit Video</Link>
+            {/* <Link to="/">=========</Link>
             <Link to="/">=========</Link>
-            <Link to="/">=========</Link>
-            <Link to="/">=========</Link>
+            <Link to="/">=========</Link> */}
           </div>
           <div className="footer-link-items">
             <h2>Social Media</h2>

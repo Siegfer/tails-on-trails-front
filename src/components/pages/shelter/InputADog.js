@@ -10,6 +10,9 @@ const InputADog = () => {
   const [gender, setGender] = useState("");
   const [size, setSize] = useState("");
   const [characteristic, setCharicteristic] = useState("");
+  const [age, setAge] = useState("");
+  const [description, setDescription] = useState("");
+
   const [redirect, setRedirect] = useState(false);
 
   const handleName = (e) => {
@@ -27,8 +30,17 @@ const InputADog = () => {
   const handleSize = (e) => {
     setSize(e.target.value);
   };
+
   const handleCharicteristic = (e) => {
     setCharicteristic(e.target.value);
+  };
+
+  const handleAge = (e) => {
+    setAge(e.target.value);
+  };
+
+  const handleDescription = (e) => {
+    setDescription(e.target.value);
   };
 
   const handleSubmit = (e) => {
@@ -53,56 +65,90 @@ const InputADog = () => {
             <h2 className="py-2">Add a new dog to your doggy database</h2>
             <form onSubmit={handleSubmit}>
               <div className="form-group">
-                <label htmlFor="name">Dog Name</label>
+                <label className="profile-form-label" htmlFor="name">
+                  Dog Name
+                </label>
                 <input
                   type="text"
                   name="name"
                   value={name}
                   onChange={handleName}
-                  className="form-control"
+                  className="profile-form-control"
                 />
               </div>
               <div className="form-group">
-                <label htmlFor="breed">Breed</label>
+                <label className="profile-form-label" htmlFor="breed">
+                  Breed
+                </label>
                 <input
                   type="text"
                   name="breed"
                   value={breed}
                   onChange={handleBreed}
-                  className="form-control"
+                  className="profile-form-control"
                 />
               </div>
               <div className="form-group">
-                <label htmlFor="gender">Gender</label>
+                <label className="profile-form-label" htmlFor="gender">
+                  Gender
+                </label>
                 <input
                   type="text"
                   name="gender"
                   value={gender}
                   onChange={handleGender}
-                  className="form-control"
+                  className="profile-form-control"
                 />
               </div>
               <div className="form-group">
-                <label htmlFor="size">Size</label>
+                <label className="profile-form-label" htmlFor="size">
+                  Size
+                </label>
                 <input
                   type="text"
                   name="size"
                   value={size}
                   onChange={handleSize}
-                  className="form-control"
+                  className="profile-form-control"
                 />
               </div>
               <div className="form-group">
-                <label htmlFor="characteristic">Characteristic</label>
+                <label className="profile-form-label" htmlFor="characteristic">
+                  Characteristic
+                </label>
                 <input
                   type="text"
                   name="characteristic"
                   value={characteristic}
                   onChange={handleCharicteristic}
-                  className="form-control"
+                  className="profile-form-control"
                 />
               </div>
-              <button type="submit" className="submit-button">
+              <div className="form-group">
+                <label className="profile-form-label" htmlFor="characteristic">
+                  Age
+                </label>
+                <input
+                  type="text"
+                  name="characteristic"
+                  value={age}
+                  onChange={handleAge}
+                  className="profile-form-control"
+                />
+              </div>
+              <div className="form-group">
+                <label className="profile-form-label" htmlFor="characteristic">
+                  Description
+                </label>
+                <input
+                  type="text"
+                  name="characteristic"
+                  value={description}
+                  onChange={handleDescription}
+                  className="profile-form-control"
+                />
+              </div>
+              <button id="profile-form-button" type="submit" className="">
                 Submit
               </button>
             </form>
