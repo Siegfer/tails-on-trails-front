@@ -1,7 +1,6 @@
 import React from 'react'
 
 const DogsContainer = (props) => {
-	console.log(`🧚🏽‍♂️ ~ DogsContainer ~ props`, props)
 	return (
 		<div>
 			<h1>{props.name}</h1>
