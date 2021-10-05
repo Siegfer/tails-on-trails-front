@@ -14,6 +14,7 @@ const Walkers = () => {
 			setWalkers(res.data.walkers)
 		}
 		walkerData()
+		console.log(`🧚🏽‍♂️ ~ useEffect ~ walkerData`, walkerData)
 	}, [])
 
 	const allWalkers = () => {
