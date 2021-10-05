@@ -1,10 +1,11 @@
-// Imports
 import React, { useState } from "react";
 import Switch from "react-switch";
 import axios from "axios";
 import jwt_decode from "jwt-decode";
 import { Redirect } from "react-router-dom";
 import setAuthToken from "../../../utils/setAuthToken";
+import "./OneLogin.css";
+
 const { REACT_APP_SERVER_URL } = process.env;
 
 const OneLogin = (props) => {
@@ -47,54 +48,68 @@ const OneLogin = (props) => {
   if (props.user) return <Redirect to="/" />;
 
   return (
-    <div className="login-form-shelter">
-      <div className="row mt-4">
-        <div className="col-md-7 offset-md-3">
-          <div className="card card-body">
-            <h2 className="py-2">Login</h2>
-            <form onSubmit={handleSubmit}>
-              <div className="form-group">
-                <label htmlFor="email">Email</label>
-                <input
-                  type="email"
-                  name="email"
-                  value={email}
-                  onChange={handleEmail}
-                  className="form-control"
-                />
-              </div>
-              <div className="form-group">
-                <label htmlFor="password">Password</label>
-                <input
-                  type="password"
-                  name="password"
-                  value={password}
-                  onChange={handlePassword}
-                  className="form-control"
-                />
-              </div>
-              <div className="form-group">
-                <label htmlFor="role">I am a ...</label>
-                <span>
-                  <span htmlFor="walker">WALKER</span>
-                  <Switch
-                    onChange={handleChange}
-                    checked={checked}
-                    className="react-switch"
-                    checkedHandleIcon={<div>🏥</div>}
-                    uncheckedHandleIcon={<div>🦮</div>}
-                    checkedIcon={false}
-                    uncheckedIcon={false}
-                    onColor={"#eb9834"}
-                    offColor={"#34ebe8"}
+    <div className="login-body-div">
+      <div className="login-form">
+        <div className="row mt-4">
+          <div className="col-md-7 offset-md-3">
+            <div className="card card-body">
+              <h2 id="login" className="py-2">
+                Login to your Account
+              </h2>
+              <form onSubmit={handleSubmit}>
+                <div className="form-group">
+                  <label id="label-login" htmlFor="email">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    value={email}
+                    onChange={handleEmail}
+                    className="form-control-login"
                   />
-                  <span htmlFor="shelter">SHELTER</span>
-                </span>
-              </div>
-              <button type="submit" className="submit-button">
-                Submit
-              </button>
-            </form>
+                </div>
+                <div className="form-group">
+                  <label id="label-login" htmlFor="password">
+                    Password
+                  </label>
+                  <input
+                    type="password"
+                    name="password"
+                    value={password}
+                    onChange={handlePassword}
+                    className="form-control-login"
+                  />
+                </div>
+                <div className="form-group">
+                  <label id="i-am" htmlFor="role">
+                    I am a ...
+                  </label>
+                  <span>
+                    <span id="walker" htmlFor="walker">
+                      WALKER
+                    </span>
+                    <Switch
+                      onChange={handleChange}
+                      checked={checked}
+                      className="react-switch"
+                      checkedHandleIcon={<div>🏥</div>}
+                      uncheckedHandleIcon={<div>🦮</div>}
+                      checkedIcon={false}
+                      uncheckedIcon={false}
+                      onColor={"#eb9834"}
+                      offColor={"#34ebe8"}
+                    />
+                    <span id="shelter" htmlFor="shelter">
+                      SHELTER
+                    </span>
+                  </span>
+                </div>
+                <button type="submit" id="submit-button-onelogin">
+                  Submit
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </div>

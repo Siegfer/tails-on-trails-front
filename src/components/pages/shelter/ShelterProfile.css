@@ -75,16 +75,7 @@ h1 {
 /* .shelter-dogs-form {
   background-color: blueviolet;
 } */
-.doggy-data {
-  background: rgba(0, 0, 0, 0.397);
-  border-radius: 10px;
-  border: 2px solid #ec0da2;
-  width: 45%;
-  margin-top: 0rem;
-  margin-left: 60rem;
-  color: white;
-  padding: 20px;
-}
+
 .walker-data {
   height: 300px;
   width: 300px;
@@ -110,10 +101,6 @@ h1 {
   text-align: center;
   color: white;
 } */
-.dogs-container {
-  width: 20rem;
-  height: 20rem;
-}
 
 #profile-form-button {
   margin-top: 10px;
@@ -137,4 +124,33 @@ h1 {
   font-size: 1vw;
   width: 10rem;
   height: 2rem;
+}
+
+#doggy-data {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background: rgba(0, 0, 0, 0.397);
+  border-radius: 10px;
+  /* border: 2px solid #ec0da2; */
+  width: 45%;
+  margin-top: 1rem;
+  margin-left: 62rem;
+  color: white;
+  padding: 5px;
+}
+
+#your-dogs {
+  margin: 1rem;
+  border: 2px solid #ec0da2;
+  border-radius: 10px;
+  width: 13rem;
+  height: 11rem;
+  padding: 5px;
+}
+#profile-dog-title {
+  margin-top: 2rem;
+  margin-left: 79rem;
+  color: white;
 }

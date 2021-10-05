@@ -77,7 +77,7 @@ const Navbar = (props) => {
                   className="nav-links"
                   onClick={closeMobileMenu}
                 >
-                  Volunteer's Hub
+                  Volunteer Today!
                 </Link>
               </li>
               <li className="nav-item">
